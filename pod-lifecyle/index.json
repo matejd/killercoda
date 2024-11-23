@@ -1,0 +1,18 @@
+{
+    "title": "Pod Lifecyle",
+    "description": "Pod Lifecyle",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "List Pods",
+                "text": "step1.md"
+            }
+        ]
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
