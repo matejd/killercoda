@@ -14,7 +14,7 @@
         "assets": {
             "host01": [
                 {
-                    "file": "deployment.yaml",
+                    "file": "statefulset.yaml",
                     "target": "/root",
                     "chmod": "+w"
                 },
