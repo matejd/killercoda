@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aspnetapp-config
+data:
+  Redis__Host: "redis2:8888"
+  Logging__LogLevel__Default: debug

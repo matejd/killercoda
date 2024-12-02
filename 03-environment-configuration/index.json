@@ -9,6 +9,10 @@
             {
                 "title": "Deploy",
                 "text": "step1.md"
+            },
+            {
+                "title": "ConfigMap",
+                "text": "step2.md"
             }
         ],
         "assets": {
@@ -20,6 +24,16 @@
                 },
                 {
                     "file": "service.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "configmap.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "statefulset_configmap.yaml",
                     "target": "/root",
                     "chmod": "+w"
                 }
