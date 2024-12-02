@@ -6,8 +6,10 @@ Now update StatefulSet to use a Secret:
 ```plain
 kubectl create secret generic app-secrets \
     --from-literal=Redis__Host=secret_redis:6666 \
-    --from-literal=Redis__Password=MySecretPassword'
+    --from-literal=Redis__Password=MySecretPassword
+```{{exec}}
 
+```plain
 kubectl apply -f /root/statefulset_secret.yaml
 ```{{exec}}
 
