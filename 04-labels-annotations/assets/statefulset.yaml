@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: aspnetapp
+  annotations:
+    meta.solve-x.net/git-branch: main
+    meta.solve-x.net/git-commit: 019366781d0b41bf19039705db6fbc1d70c76eaa
+  labels:
+    app.kubernetes.io/name: aspnetapp
+    app.kubernetes.io/instance: aspnetapp-labels-demo
+    app.kubernetes.io/version: "1.0.0"
+    app.kubernetes.io/component: net
+    app.kubernetes.io/part-of: aspnetapp
+    app.kubernetes.io/managed-by: custom-tool
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aspnetapp
+  template:
+    metadata:
+      labels:
+        app: aspnetapp
+    spec:
+      containers:
+      - name: aspnetapp
+        image: registry.gitlab.com/solve-x-kubernetes/aspnetapp:main
+        ports:
+        - containerPort: 8080
