@@ -11,8 +11,12 @@
                 "text": "step1.md"
             },
             {
-                "title": "ConfigMap",
+                "title": "ConfigMaps",
                 "text": "step2.md"
+            },
+            {
+                "title": "Secrets",
+                "text": "step3.md"
             }
         ],
         "assets": {
@@ -34,6 +38,11 @@
                 },
                 {
                     "file": "statefulset_configmap.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "statefulset_secret.yaml",
                     "target": "/root",
                     "chmod": "+w"
                 }
