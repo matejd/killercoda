@@ -8,7 +8,7 @@ kubectl apply -f /root/statefulset.yaml
 kubectl apply -f /root/service.yaml
 ```{{exec}}
 
-Wait for pod to get ready:
+Wait for pods to get ready:
 
 ```plain
 kubectl get pods -w
