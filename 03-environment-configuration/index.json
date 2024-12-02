@@ -1,0 +1,32 @@
+{
+    "title": "03 - Environment configuration",
+    "description": "Environment configuration with ConfigMaps and Secrets",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Deploy",
+                "text": "step1.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {
+                    "file": "statefulset.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "service.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
