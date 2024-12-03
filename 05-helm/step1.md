@@ -21,6 +21,16 @@ kubectl get pvc
 kubectl get pv
 ```{{exec}}
 
+```plain
+kubectl get secrets
+```{{exec}}
+
+Inspect data stored in a secret created by Helm:
+
+```plain
+kubectl get secret sh.helm.release.v1.aspnetapp.v1 -o go-template='{{.data.release | base64decode | base64decode}}' | gzip -d | jq . | more
+```{{exec}}
+
 Get generated Postgres password and store it in an environment variable:
 
 ```plain
