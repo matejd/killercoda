@@ -28,7 +28,7 @@ Inspect running processes:
 ps aux
 ```{{exec}}
 
-Additional steps are needed to access container's file system:
+Additional steps are needed to access container's filesystem:
 
 ```plain
 addgroup -g 1654 debug
