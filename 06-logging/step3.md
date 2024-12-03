@@ -3,7 +3,7 @@
 
 Now we'll install Fluent Bit and configure
 it to collect logs from all containers.
-It'll send collected logs a webhook at [https://webhook.site].
+It'll send collected logs a webhook at [https://webhook.site](https://webhook.site).
 
 First, edit `fluentbit_values.yaml` to use your own webhook id.
 
