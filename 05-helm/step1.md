@@ -36,3 +36,9 @@ kubectl run aspnetapp-postgresql-client --rm --tty -i --restart='Never' \
   --env="PGPASSWORD=$POSTGRES_PASSWORD" \
   --command -- psql --host aspnetapp-postgresql -U postgres -d postgres -p 5432
 ```{{exec}}
+
+Execute an example SQL query:
+
+```plain
+select version();
+```{{exec}}
