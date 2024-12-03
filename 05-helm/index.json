@@ -1,0 +1,19 @@
+{
+    "title": "05 - Helm",
+    "description": "Helm",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Deploy",
+                "text": "step1.md"
+            }
+        ],
+        "assets": {}
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
