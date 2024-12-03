@@ -1,0 +1,41 @@
+{
+    "title": "06 - Logging",
+    "description": "Logging",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Deploy",
+                "text": "step1.md"
+            },
+            {
+                "title": "Inspect",
+                "text": "step2.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {
+                    "file": "statefulset.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "statefulset_json_logging.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "service.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
