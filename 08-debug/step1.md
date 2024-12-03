@@ -10,5 +10,5 @@ kubectl apply -f /root/deployment.yaml
 Wait for pod to get ready:
 
 ```plain
-kubectl get pods
+kubectl get pods -w
 ```{{exec}}
