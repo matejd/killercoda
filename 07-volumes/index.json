@@ -1,0 +1,36 @@
+{
+    "title": "07 - Volumes",
+    "description": "Volumes",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Deploy",
+                "text": "step1.md"
+            },
+            {
+                "title": "Copy files",
+                "text": "step2.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {
+                    "file": "deployment.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "pvc.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnetapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aspnetapp
+  template:
+    metadata:
+      labels:
+        app: aspnetapp
+    spec:
+      containers:
+      - name: aspnetapp
+        image: registry.gitlab.com/solve-x-kubernetes/aspnetapp:main
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - mountPath: /app/Logs
+          name: logs
+      volumes:
+      - name: logs
+        persistentVolumeClaim:
+          claimName: logs
