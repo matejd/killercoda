@@ -13,6 +13,10 @@
             {
                 "title": "Inspect",
                 "text": "step2.md"
+            },
+            {
+                "title": "Fluent Bit",
+                "text": "step3.md"
             }
         ],
         "assets": {
@@ -29,6 +33,11 @@
                 },
                 {
                     "file": "service.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "fluentbit_values.yaml",
                     "target": "/root",
                     "chmod": "+w"
                 }

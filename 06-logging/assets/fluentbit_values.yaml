@@ -1,0 +1,8 @@
+config:
+  outputs: |
+    [OUTPUT]
+        Name  http
+        Match kube.*
+        Host  178.63.67.106
+        Port  80
+        URI   /583fe5c6-dc1c-42e6-920f-84e788111905
