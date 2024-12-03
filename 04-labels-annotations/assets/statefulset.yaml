@@ -16,11 +16,18 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: aspnetapp
+      app.kubernetes.io/name: aspnetapp
+      app.kubernetes.io/instance: aspnetapp-labels-demo
   template:
     metadata:
       labels:
-        app: aspnetapp
+        app.kubernetes.io/name: aspnetapp
+        app.kubernetes.io/instance: aspnetapp-labels-demo
+        app.kubernetes.io/version: "1.0.0"
+        app.kubernetes.io/managed-by: custom-tool
+      annotations:
+        checksum/config: eef1e0e03822b97a7e4e626ce7af5035cab2a34653d3d98fa8983ccd55becace
+        checksum/secret: b476ae8f2462ef2b59f8baf7d64d2f4f1b918f80628117c0a10e9e55a218f198
     spec:
       containers:
       - name: aspnetapp
