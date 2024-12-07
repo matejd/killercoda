@@ -1,0 +1,23 @@
+{
+    "title": "09 - Sealed Secrets",
+    "description": "Sealed Secrets",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Install Sealed Secrets operator",
+                "text": "step1.md"
+            },
+            {
+                "title": "Use Sealed Secrets",
+                "text": "step2.md"
+            }
+        ],
+        "assets": {}
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
