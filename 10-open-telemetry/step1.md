@@ -10,7 +10,7 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 Install OpenTelemetry operator:
 
 ```plain
-kubectl apply -f https://github.com/open-telemetry/opentelemetry-operator/releases/v0.114.1/download/opentelemetry-operator.yaml
+kubectl apply -f https://github.com/open-telemetry/opentelemetry-operator/releases/download/v0.114.1/opentelemetry-operator.yaml
 ```{{exec}}
 
 Install Jaeger:
