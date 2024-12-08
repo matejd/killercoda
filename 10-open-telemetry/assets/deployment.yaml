@@ -8,6 +8,8 @@ spec:
     metadata:
       labels:
         app: aspnetapp
+      annotations:
+        instrumentation.opentelemetry.io/inject-dotnet: "true"
     spec:
       containers:
       - name: aspnetapp

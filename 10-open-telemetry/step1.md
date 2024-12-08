@@ -19,6 +19,12 @@ Install OpenTelemetry operator:
 kubectl apply -f https://github.com/open-telemetry/opentelemetry-operator/releases/download/v0.114.1/opentelemetry-operator.yaml
 ```{{exec}}
 
+Wait for OpenTelemetry to start:
+
+```plain
+kubectl get pods -n opentelemetry-operator-system -w
+```{{exec}}
+
 Install Jaeger:
 
 ```plain
@@ -37,12 +43,6 @@ Setup instrumentation:
 
 ```plain
 kubectl apply -f instrumentation.yaml
-```{{exec}}
-
-Wait for OpenTelemetry to start:
-
-```plain
-kubectl get pods -n opentelemetry-operator-system -w
 ```{{exec}}
 
 Install example Deployment and Service:
