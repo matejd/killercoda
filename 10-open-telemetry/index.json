@@ -1,0 +1,23 @@
+{
+    "title": "10 - OpenTelemetry",
+    "description": "OpenTelemetry",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "TODO",
+                "text": "step1.md"
+            },
+            {
+                "title": "TODO",
+                "text": "step2.md"
+            }
+        ],
+        "assets": {}
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node-4GB"
+    }
+}
