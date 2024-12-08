@@ -7,6 +7,12 @@ Install Cert Manager operator:
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.16.2/cert-manager.yaml
 ```{{exec}}
 
+Wait for Cert Manager to start:
+
+```plain
+kubectl get pods -n cert-manager -w
+```{{exec}}
+
 Install OpenTelemetry operator:
 
 ```plain
@@ -31,4 +37,17 @@ Setup instrumentation:
 
 ```plain
 kubectl apply -f instrumentation.yaml
+```{{exec}}
+
+Wait for OpenTelemetry to start:
+
+```plain
+kubectl get pods -n opentelemetry-operator-system -w
+```{{exec}}
+
+Install example Deployment and Service:
+
+```plain
+kubectl apply -f /root/deployment.yaml
+kubectl apply -f /root/service.yaml
 ```{{exec}}

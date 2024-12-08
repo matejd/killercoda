@@ -19,14 +19,12 @@ spec:
       batch:
         send_batch_size: 10000
         timeout: 10s
-
     exporters:
-      jaeger:
+      otlp:
         endpoint: jaeger-collector.default.svc.cluster.local:14250
         tls:
           insecure: true
       debug: {}
-
     service:
       pipelines:
         traces:
