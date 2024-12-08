@@ -15,7 +15,35 @@
                 "text": "step2.md"
             }
         ],
-        "assets": {}
+        "assets": {
+            "host01": [
+                {
+                    "file": "collector.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "instrumentation.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "jaeger-values.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "deployment.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "service.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
     },
     "backend": {
         "imageid": "kubernetes-kubeadm-1node-4GB"
