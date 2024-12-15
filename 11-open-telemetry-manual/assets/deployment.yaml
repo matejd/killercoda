@@ -17,6 +17,8 @@ spec:
           value: "http://aspire-dashboard:4317"
         - name: OTEL_SERVICE_NAME
           value: "CartService"
+        - name: FORCE_HTTPS
+          value: "true"
         ports:
         - containerPort: 8080
   selector:

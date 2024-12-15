@@ -20,7 +20,7 @@ Wait for pods to get ready:
 kubectl get pods -w
 ```{{exec}}
 
-Access service at [link]({{TRAFFIC_HOST1_32080}}).
+Access service at [link]({{TRAFFIC_HOST1_32080}}/AddProductsToCart).
 
 Access Aspire dashboard at [link]({{TRAFFIC_HOST1_31888}}).
 
