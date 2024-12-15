@@ -1,0 +1,37 @@
+{
+    "title": "10 - OpenTelemetry",
+    "description": "OpenTelemetry - manual instrumentation",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Configure",
+                "text": "step1.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {
+                    "file": "deployment.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "service.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "aspire.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node-4GB"
+    }
+}

@@ -1,0 +1,46 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspire-dashboard
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aspire-dashboard
+    spec:
+      containers:
+      - name: aspire-dashboard
+        image: mcr.microsoft.com/dotnet/aspire-dashboard:9.0
+        env:
+        - name: DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS
+          value: "true"
+  selector:
+    matchLabels:
+      app: aspire-dashboard
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aspire-dashboard-ui
+spec:
+  type: NodePort
+  ports:
+  - port: 18888
+    targetPort: 18888
+    nodePort: 18888
+  selector:
+    app: aspire-dashboard
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aspire-otlp
+spec:
+  type: ClusterIp
+  ports:
+  - port: 4317
+    targetPort: 18889
+  selector:
+    app: aspire-dashboard
