@@ -22,5 +22,5 @@ kubectl get pods -w
 
 Access service at [link]({{TRAFFIC_HOST1_32080}}).
 
-Access Aspire dashboard at [link]({{TRAFFIC_HOST1_18888}}).
+Access Aspire dashboard at [link]({{TRAFFIC_HOST1_31888}}).
 
