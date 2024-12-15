@@ -1,7 +1,7 @@
 
 <br>
 
-This scenario installs OpenTelemetry operator and configures
+This scenario installs the OpenTelemetry operator and configures
 automatic instrumentation.
 
 OpenTelemetry .NET automatic instrumentation sends traces and metrics
