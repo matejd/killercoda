@@ -1,7 +1,7 @@
 
 <br>
 
-Make a few requests to the example app at [link]({{TRAFFIC_HOST1_32080}}).
+Make a few requests to the example app at [link]({{TRAFFIC_HOST1_32080}}/AspNetCoreBranches).
 
 Then access Jaeger to inspect traces:
 
