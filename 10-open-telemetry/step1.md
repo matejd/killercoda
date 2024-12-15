@@ -39,13 +39,19 @@ Create OpenTelemetry collector:
 kubectl apply -f collector.yaml
 ```{{exec}}
 
-Setup instrumentation:
+Wait for collector to start:
+
+```plain
+kubectl get pods -w
+```{{exec}}
+
+Setup auto-instrumentation:
 
 ```plain
 kubectl apply -f instrumentation.yaml
 ```{{exec}}
 
-Install example Deployment and Service:
+Finally, install the example app which will be auto-instrumented:
 
 ```plain
 kubectl apply -f /root/deployment.yaml

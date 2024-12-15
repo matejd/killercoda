@@ -1,17 +1,17 @@
 {
     "title": "10 - OpenTelemetry",
-    "description": "OpenTelemetry",
+    "description": "OpenTelemetry operator - auto-instrumentation",
     "details": {
         "intro": {
             "text": "intro.md"
         },
         "steps": [
             {
-                "title": "TODO",
+                "title": "Configure",
                 "text": "step1.md"
             },
             {
-                "title": "TODO",
+                "title": "Inspect",
                 "text": "step2.md"
             }
         ],

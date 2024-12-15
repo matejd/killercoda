@@ -1,7 +1,9 @@
 
 <br>
 
-Access Jaeger:
+Make a few requests to the example app at [link]({{TRAFFIC_HOST1_32080}}).
+
+Then access Jaeger to inspect traces:
 
 ```plain
 export POD_NAME=$(k get pods -l "app.kubernetes.io/instance=jaeger" -o jsonpath="{.items[0].metadata.name}")
