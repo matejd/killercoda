@@ -14,7 +14,7 @@ spec:
         image: registry.gitlab.com/solve-x-kubernetes/cartservice:main
         env:
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
-          value: "http://aspire-dashboard:4317"
+          value: "http://aspire-otlp:4317"
         - name: OTEL_SERVICE_NAME
           value: "CartService"
         - name: FORCE_HTTPS
