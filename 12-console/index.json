@@ -1,0 +1,27 @@
+{
+    "title": "12 - OpenShift Console",
+    "description": "OpenShift Console UI.",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Deploy",
+                "text": "step1.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {
+                    "file": "console.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
