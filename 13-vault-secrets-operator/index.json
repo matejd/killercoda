@@ -1,6 +1,6 @@
 {
-    "title": "12 - OpenShift Console",
-    "description": "OpenShift Console UI",
+    "title": "13 - Vault Secrets Operator",
+    "description": "Vault Secrets Operator",
     "details": {
         "intro": {
             "text": "intro.md"
@@ -14,7 +14,7 @@
         "assets": {
             "host01": [
                 {
-                    "file": "console.yaml",
+                    "file": "vault-values.yaml",
                     "target": "/root",
                     "chmod": "+w"
                 }
