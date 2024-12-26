@@ -26,3 +26,9 @@ kubectl get pods -w
 ```{{exec}}
 
 Finally, access aspnetapp at [link]({{TRAFFIC_HOST1_32080}}).
+
+To inspect the created Kubernetes secret, run:
+
+```plain
+k get secret aspnetapp-vault-secret --template='{{.data.Redis__Password}}' | base64 -d
+```{{exec}}
