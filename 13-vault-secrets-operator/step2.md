@@ -21,7 +21,7 @@ path "secret/data/aspnetapp" {
 
 Now create a Kubernetes role:
 - go back to Kubernetes authentication
-- create new role _aspnetapp_ with:
+- create a new role _aspnetapp_ with:
   * Bound service account names: _aspnetapp_
   * Bound service account namespaces: _default_
   * Generated Token's Policies: _aspnetapp_

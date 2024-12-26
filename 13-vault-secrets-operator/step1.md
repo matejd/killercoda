@@ -22,4 +22,4 @@ Port-forward and access Vault UI:
 kubectl port-forward --address 0.0.0.0 -n vault svc/vault-ui 8200:8200
 ```{{exec}}
 
-Open [Vault UI]({{TRAFFIC_HOST1_8200}}).
+Open [Vault UI]({{TRAFFIC_HOST1_8200}}) and sign in with token "root".
