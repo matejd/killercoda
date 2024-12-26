@@ -13,7 +13,7 @@ helm install vault hashicorp/vault -n vault --create-namespace --values /root/va
 Wait for the Vault pod to get ready:
 
 ```plain
-kubectl get pods -n vault -w
+kubectl wait --for=condition=Ready -n vault pod/vault-0
 ```{{exec}}
 
 Port-forward and access Vault UI:

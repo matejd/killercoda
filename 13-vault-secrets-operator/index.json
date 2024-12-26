@@ -7,12 +7,30 @@
         },
         "steps": [
             {
-                "title": "Deploy",
+                "title": "Deploy Vault",
                 "text": "step1.md"
+            },
+            {
+                "title": "Configure Vault",
+                "text": "step2.md"
+            },
+            {
+                "title": "Deploy Vault Secrets Operator",
+                "text": "step3.md"
             }
         ],
         "assets": {
             "host01": [
+                {
+                    "file": "aspnetapp.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "vault-operator-values.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
                 {
                     "file": "vault-values.yaml",
                     "target": "/root",

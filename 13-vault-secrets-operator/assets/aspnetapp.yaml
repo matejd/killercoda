@@ -1,0 +1,69 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: aspnetapp
+---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: VaultAuth
+metadata:
+  name: aspnetapp-vault-auth
+spec:
+  method: kubernetes
+  mount: kubernetes
+  kubernetes:
+    role: aspnetapp
+    serviceAccount: aspnetapp
+    audiences:
+      - vault
+---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: VaultStaticSecret
+metadata:
+  name: aspnetapp
+spec:
+  type: kv-v2
+  mount: secret
+  path: aspnetapp
+  destination:
+    name: aspnetapp-vault-secret
+    create: true
+  refreshAfter: 30s
+  vaultAuthRef: aspnetapp-vault-auth
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnetapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aspnetapp
+  template:
+    metadata:
+      labels:
+        app: aspnetapp
+    spec:
+      serviceAccountName: aspnetapp
+      containers:
+      - name: aspnetapp
+        image: registry.gitlab.com/solve-x-kubernetes/aspnetapp:main
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - secretRef:
+            name: aspnetapp-vault-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aspnetapp
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 32080
+  selector:
+    app: aspnetapp
