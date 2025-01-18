@@ -1,6 +1,6 @@
 <br>
 
-Now let's inspect the environments to see what kubeadm did and how it all fits
+Now let's inspect the environment to see what kubeadm did and how it all fits
 together.
 
 First, kubelet Kubernetes node agent is running as a systemd service:
@@ -9,12 +9,15 @@ First, kubelet Kubernetes node agent is running as a systemd service:
 systemctl status kubelet
 ```{{exec}}
 
+(press q to close)
+
 ```plain
 systemctl cat kubelet
 ```{{exec}}
 
 kubeadm:
 
+- executed preflight checks
 - created folder `/etc/kubernetes`
 - created folder `/etc/kubernetes/pki`
 - created folder `/etc/kubernetes/manifests`
@@ -39,11 +42,7 @@ except for kubelet.
 Inspect files in `/etc/kubernetes`:
 
 ```plain
-ls -lah /etc/kubernetes
-
-ls -lah /etc/kubernetes/pki
-
-ls -lah /etc/kubernetes/manifests
+apt-get install -y tree && tree /etc/kubernetes
 ```{{exec}}
 
 Inspect all Pods:
@@ -68,3 +67,8 @@ kube-system   kube-controller-manager-ubuntu             1/1     Running   0    
 kube-system   kube-proxy-vllxd                           1/1     Running   0          13m
 kube-system   kube-scheduler-ubuntu                      1/1     Running   0          13m
 ```
+
+TODO:
+
+- Calico
+- API Server audit logs
