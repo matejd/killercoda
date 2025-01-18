@@ -1,0 +1,19 @@
+{
+    "title": "14 - kubeadm",
+    "description": "kubeadm",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Use kubeadm to install a Kubernetes cluster",
+                "text": "step1.md"
+            }
+        ],
+        "assets": {}
+    },
+    "backend": {
+        "imageid": "ubuntu-4GB"
+    }
+}
