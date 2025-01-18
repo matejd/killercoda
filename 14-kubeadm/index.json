@@ -9,6 +9,10 @@
             {
                 "title": "Use kubeadm to install a Kubernetes cluster",
                 "text": "step1.md"
+            },
+            {
+                "title": "Inspect components",
+                "text": "step2.md"
             }
         ],
         "assets": {}
