@@ -36,11 +36,11 @@ ls /etc/kubernetes/
 First, install kubelet, kubeadm and kubectl from Kubernetes repositories:
 
 ```plain
-apt-get install -y apt-transport-https ca-certificates curl gpg
-mkdir -p -m 755 /etc/apt/keyrings
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | tee /etc/apt/sources.list.d/kubernetes.list
-apt-get update
+apt-get install -y apt-transport-https ca-certificates curl && \
+mkdir -p -m 755 /etc/apt/keyrings && \
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg && \
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | tee /etc/apt/sources.list.d/kubernetes.list && \
+apt-get update && \
 apt-get install -y kubelet=1.31.5-1.1 kubectl=1.31.5-1.1 kubeadm=1.31.5-1.1
 ```{{exec}}
 
@@ -65,7 +65,9 @@ Calico CNI.
 
 ```plain
 export KUBECONFIG=/etc/kubernetes/admin.conf
+```{{exec}}
 
+```plain
 kubectl get nodes
 ```{{exec}}
 
