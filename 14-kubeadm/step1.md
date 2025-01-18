@@ -81,4 +81,4 @@ kubectl get pods -n kube-system -w
 
 ```plain
 kubectl get nodes
-```
+```{{exec}}
