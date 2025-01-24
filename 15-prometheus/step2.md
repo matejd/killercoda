@@ -9,10 +9,10 @@ kubectl apply -f /root/deployment.yaml
 kubectl apply -f /root/service.yaml
 ```{{exec}}
 
-Wait for pods to get ready:
+Wait for pod to get ready:
 
 ```plain
-kubectl get pods -w
+kubectl get pods -l app=cartservice -w
 ```{{exec}}
 
 Now create a **ServiceMonitor** to register your metrics:
@@ -25,6 +25,7 @@ metadata:
   name: cartservice
   labels:
     app: cartservice
+    release: kube-prometheus-stack
 spec:
   selector:
     matchLabels:
