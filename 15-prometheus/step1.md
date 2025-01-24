@@ -2,14 +2,10 @@
 
 Let's deploy kube-prometheus-stack. This includes:
 
-- Prometheus Operator
-- Prometheus instance
-- Alertmanager instance
-- Prometheus node-exporter
-- Prometheus blackbox-exporter
-- Prometheus Adapter for Kubernetes Metrics APIs
-- kube-state-metrics
-- Grafana
+- **Prometheus Operator** for spinning up and managing Prometheus instances
+- **Grafana** for visualizing metrics and plot data using dashboards
+- **Alertmanager** for configuring various notifications (Slack, email, etc)
+  based on various alerts received from the Prometheus
 
 ```plain
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
@@ -24,4 +20,4 @@ Port-forward Grafana:
 kubectl port-forward svc/kube-prometheus-stack-grafana 31000:80 --address 0.0.0.0
 ```{{exec}}
 
-and visit [link]({{TRAFFIC_HOST1_31000}}).
+and visit [this link]({{TRAFFIC_HOST1_31000}}).
