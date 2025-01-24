@@ -17,6 +17,8 @@ helm repo update
 helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack
 ```{{exec}}
 
+(this can take a minute)
+
 Watch pods get created:
 
 ```plain
