@@ -9,9 +9,25 @@
             {
                 "title": "Deploy kube-prometheus-stack",
                 "text": "step1.md"
+            },
+            {
+                "title": "Collect application metrics",
+                "text": "step2.md"
             }
         ],
         "assets": {
+            "host01": [
+                {
+                    "file": "deployment.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "service.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
         }
     },
     "backend": {

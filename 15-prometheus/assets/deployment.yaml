@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cartservice
+    spec:
+      containers:
+      - name: cartservice
+        image: registry.gitlab.com/solve-x-kubernetes/cartservice:main
+        env:
+        - name: FORCE_HTTPS
+          value: "true"
+        ports:
+        - containerPort: 8080
+  selector:
+    matchLabels:
+      app: cartservice
