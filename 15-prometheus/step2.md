@@ -41,7 +41,13 @@ and re-generate the Prometheus configuration.
 Prometheus will then periodically scrape metrics
 from the configured address.
 
-Access service at [link]({{TRAFFIC_HOST1_32080}}/AddProductsToCart)
+Port-forward this service:
+
+```plain
+kubectl port-forward svc/cartservice 32081:8080 --address 0.0.0.0
+```{{exec}}
+
+Access service at [link]({{TRAFFIC_HOST1_32081}}/AddProductsToCart)
 to create some traffic (and metrics).
 
-Open Grafana again and explore metric `carts_count_total`.
+Now open Grafana again and explore metric `carts_count_total`.
