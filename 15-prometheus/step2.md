@@ -38,5 +38,10 @@ EOF
 Prometheus operator will notice this new object
 and re-generate the Prometheus configuration.
 
+Prometheus will then periodically scrape metrics
+from the configured address.
+
 Access service at [link]({{TRAFFIC_HOST1_32080}}/AddProductsToCart)
 to create some traffic (and metrics).
+
+Open Grafana again and explore metric `carts_count_total`.
