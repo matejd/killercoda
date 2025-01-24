@@ -1,0 +1,20 @@
+{
+    "title": "15 - Prometheus",
+    "description": "Prometheus",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Deploy kube-prometheus-stack",
+                "text": "step1.md"
+            }
+        ],
+        "assets": {
+        }
+    },
+    "backend": {
+        "imageid": "kubernetes-kubeadm-1node"
+    }
+}
