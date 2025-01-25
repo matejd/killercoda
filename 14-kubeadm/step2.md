@@ -67,8 +67,3 @@ kube-system   kube-controller-manager-ubuntu             1/1     Running   0    
 kube-system   kube-proxy-vllxd                           1/1     Running   0          13m
 kube-system   kube-scheduler-ubuntu                      1/1     Running   0          13m
 ```
-
-TODO:
-
-- Calico
-- API Server audit logs
