@@ -9,6 +9,8 @@ to the kube-apiserver:
 - `--audit-log-path` output file
 - `--audit-webhook-config-file` audit webhook configuration
 
+First, we need to create configuration files:
+
 ```plain
 cat <<EOT >> /etc/kubernetes/pki/audit-policy.yaml
 apiVersion: audit.k8s.io/v1
@@ -46,15 +48,14 @@ users: []
 EOT
 ```{{exec}}
 
-Modify kube-apiserver static pod configuration file:
+Then modify kube-apiserver static pod configuration file `/etc/kubernetes/manifests/kube-apiserver.yaml`,
+add the following arguments:
 
-```plain
-sed -i '16i\    - --audit-policy-file=/etc/kubernetes/pki/audit-policy.yaml' /etc/kubernetes/manifests/kube-apiserver.yaml
-
-sed -i '17i\    - --audit-log-path=/tmp/audit.log' /etc/kubernetes/manifests/kube-apiserver.yaml
-
-sed -i '18i\    - --audit-webhook-config-file=/etc/kubernetes/pki/audit-webhook.yaml' /etc/kubernetes/manifests/kube-apiserver.yaml
-```{{exec}}
+```
+- --audit-policy-file=/etc/kubernetes/pki/audit-policy.yaml 
+- --audit-log-path=/tmp/audit.log
+- --audit-webhook-config-file=/etc/kubernetes/pki/audit-webhook.yaml
+```
 
 Now wait a few seconds for kubelet to restart the modified pod.
 
