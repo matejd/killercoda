@@ -14,8 +14,8 @@ cat <<EOT >> /etc/kubernetes/pki/audit-policy.yaml
 apiVersion: audit.k8s.io/v1
 kind: Policy
 rules:
-# Log pod changes at RequestResponse level
-- level: RequestResponse
+# Log pod changes at Metadata level
+- level: Metadata
   resources:
    - group: ""
      resources: ["pods"]
