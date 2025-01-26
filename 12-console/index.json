@@ -9,6 +9,10 @@
             {
                 "title": "Deploy",
                 "text": "step1.md"
+            },
+            {
+                "title": "External access",
+                "text": "step2.md"
             }
         ],
         "assets": {
