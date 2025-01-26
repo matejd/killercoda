@@ -17,6 +17,11 @@
                     "file": "console.yaml",
                     "target": "/root",
                     "chmod": "+w"
+                },
+                {
+                    "file": "kubeconfig.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
                 }
             ]
         }
