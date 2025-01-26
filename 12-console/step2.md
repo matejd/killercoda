@@ -25,7 +25,7 @@ users:
 - name: killercoda
 ```
 
-Then Proxy the API server:
+Then proxy the API server:
 
 ```plain
 kubectl proxy --port=8080 --address=0.0.0.0 --accept-hosts='.*'
