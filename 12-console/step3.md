@@ -15,7 +15,7 @@ helm upgrade --install --create-namespace -n portainer portainer portainer/porta
 Wait for pod to start:
 
 ```plain
-kubectl get pods -n portainer
+kubectl get pods -n portainer -w
 ```{{exec}}
 
 Then visit [this link]({{TRAFFIC_HOST1_30777}}).
