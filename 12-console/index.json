@@ -13,6 +13,10 @@
             {
                 "title": "External access",
                 "text": "step2.md"
+            },
+            {
+                "title": "Portainer",
+                "text": "step3.md"
             }
         ],
         "assets": {
@@ -31,6 +35,6 @@
         }
     },
     "backend": {
-        "imageid": "kubernetes-kubeadm-1node"
+        "imageid": "kubernetes-kubeadm-2nodes"
     }
 }
